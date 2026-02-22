@@ -29,7 +29,10 @@ public static class ZStd
                 ResolveZstd
             );
         }
-        catch (InvalidOperationException ex)
+        catch (InvalidOperationException)
+        {
+        }
+        catch (Exception ex)
         {
             Console.WriteLine($"Failed to set DllImportResolver for Zstd: {ex}");
         }
